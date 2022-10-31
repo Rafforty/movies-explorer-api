@@ -19,5 +19,5 @@
 
 ## Ссылки
 
-IP: 51.250.23.205
-Сайт: https://api.movies.diploma.nomoredomains.icu
+# IP: 51.250.23.205
+# Сайт: https://api.movies.diploma.nomoredomains.icu
