@@ -33,16 +33,20 @@ module.exports.getUserById = (req, res, next) => {
 
 module.exports.createUser = (req, res, next) => {
   const {
-    name, about, avatar, email, password,
+    email,
+    password,
+    name,
   } = req.body;
   bcrypt.hash(password, 10)
     .then((hash) => User.create({
-      name, about, avatar, email, password: hash,
+      email,
+      password: hash,
+      name,
     }))
     .then(() => {
       res.status(201).send({
         data: {
-          name, about, avatar, email,
+          email, name,
         },
       }).end();
     })
@@ -58,8 +62,8 @@ module.exports.createUser = (req, res, next) => {
 };
 
 module.exports.patchUser = (req, res, next) => {
-  const { name, about } = req.body;
-  User.findByIdAndUpdate(req.user._id, { name, about }, {
+  const { name, email } = req.body;
+  User.findByIdAndUpdate(req.user._id, { name, email }, {
     new: true,
     runValidators: true,
   })

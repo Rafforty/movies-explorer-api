@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
-const routes = require('./routes/index');
+const router = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
 const limiter = require('./middlewares/rateLimiter');
@@ -27,7 +27,8 @@ app.use(helmet());
 
 app.use(requestLogger);
 app.use(limiter);
-app.use(routes);
+
+app.use(router);
 
 app.use(errorLogger);
 app.use(errors());
