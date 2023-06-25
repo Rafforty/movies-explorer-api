@@ -1,5 +1,6 @@
 # movies-explorer-api
 
+## Описание
 Бэкенд дипломного проекта "Яндекс.Практикум" по направлению "Веб-разработчик".
 
 ## Директории
@@ -11,13 +12,18 @@
 ## Технологии
 
 Использовано:
-1. NodeJS
-2. ExpressJS
-3. MongoDB
-4. ESlint
-5. Стайлгайд airbnb
+- NodeJS
+- ExpressJS
+- MongoDB
+- ESlint
+- Стайлгайд airbnb
+
+## Запуск проекта
+1) Клонировать репозиторий
+2) Установить зависимости `npm install`
+3) Запустить проект `npm start`
 
 ## Ссылки
 
 * IP: 51.250.23.205
-* Сайт: https://api.movies.diploma.nomoredomains.icu
+* Сайт: https://api.movies.diploma.nomoredomains.icu (временно недоступно)
